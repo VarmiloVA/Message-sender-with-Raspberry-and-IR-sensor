@@ -1,6 +1,6 @@
 class Sensor:
     def __init__(self):
-        self.movement = True
+        self.movement = False
 
     def check_movement(self):
         """Check de movement status"""
