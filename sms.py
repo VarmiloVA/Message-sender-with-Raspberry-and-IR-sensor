@@ -3,7 +3,7 @@ from twilio.rest import Client
 
 def sms_send(text):
     """Sends the SMS"""
-    #Hay que dar de alta el número en cuestion.
+    #Hay que dar de alta el número al que se quiera manda el SMS en: https://bit.ly/3k2GcLI.
  
     account_sid = 'ACef0867a31b82b7fcc145855083dc6477' 
     auth_token = '5dd20f4c22df3e9d06154762faad39ef' 
