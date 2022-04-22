@@ -5,6 +5,7 @@ import pyttsx3
 
 #My own files
 import sensor
+from sms import *
 
 #Setting up the voice.
 engine = pyttsx3.init()
@@ -24,22 +25,22 @@ class Raspberry:
 
     def run(self):
         self.time_now = datetime.datetime.now()
-        if self.time_now.hour < self.start_time.hour or self.time_now.hour > self.finish_time.hour:
-            engine.say('Es antes de las 8 de la mañana, no creo que ningún repartidor trabaje tan pronto')
-            engine.runAndWait()
-            engine.stop()
+        # if self.time_now.hour < self.start_time.hour or self.time_now.hour > self.finish_time.hour:
+        #     engine.say('Es antes de las 8 de la mañana, no creo que ningún repartidor trabaje tan pronto')
+        #     engine.runAndWait()
+        #     engine.stop()
 
-            self.out_of_service = True
+        #     self.out_of_service = True
         
-        elif self.time_now.hour > self.finish_time.hour:
-            engine.say('Es más tarde de las 8 de la tarde, no creo que ningún repartidor trabaje tan tarde')
-            engine.runAndWait()
-            engine.stop()
+        # elif self.time_now.hour > self.finish_time.hour:
+        #     engine.say('Es más tarde de las 8 de la tarde, no creo que ningún repartidor trabaje tan tarde')
+        #     engine.runAndWait()
+        #     engine.stop()
 
-            self.out_of_service = True
+        #     self.out_of_service = True
 
-        else:
-            self.sensor_message()
+        # else:
+        self.sensor_message()
 
     def sensor_message(self):
         self.movement = self.sensor.check_movement()
@@ -51,12 +52,16 @@ class Raspberry:
             engine.say('Ha llegado correo al buzón')
             engine.runAndWait()
             engine.stop()
+
+            sms_send('Ha llegado correo al buzón')
         
         elif movement == False:
             print('El buzón está vacío, volviendo a comprobar en 10 minutos')
             engine.say('El buzón está vacío, volviendo a comprobar en 10 minutos')
             engine.runAndWait()
             engine.stop()
+
+            sms_send('El buzón está vacío')
 
 flag = 0
 while __name__ == '__main__':
