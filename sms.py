@@ -10,9 +10,7 @@ def sms_send(text, phone_number):
     client = Client(account_sid, auth_token) 
  
     message = client.messages.create(  
-                              messaging_service_sid='MGbda50f472a898a67b63118b29fc05c45', 
-                              body=text,      
-                              to=phone_number 
-                          ) 
- 
-    print(message.sid)
+        messaging_service_sid='MGbda50f472a898a67b63118b29fc05c45', 
+        body=text,      
+        to=phone_number
+    )

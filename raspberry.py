@@ -34,7 +34,7 @@ class Raspberry:
         self.users = data['users']
 
     def run(self):
-        self.time_now = datetime.datetime.now()
+        #self.time_now = datetime.datetime.now()
         # if self.time_now.hour < self.start_time.hour or self.time_now.hour > self.finish_time.hour:
         #     engine.say('Es antes de las 8 de la mañana, no creo que ningún repartidor trabaje tan pronto')
         #     engine.runAndWait()
@@ -90,7 +90,20 @@ class Raspberry:
                 engine.stop()
             else:
                 self._notify(user)
+        
+        elif movement == 5:
+            user = self.users['buzon5']
+            if user['activated'] == 0:
+                engine.say('Para comprobar tu correo primero has de dar de alta tu número de teléfono')
+                engine.runAndWait()
+                engine.stop()
+            else:
+                self._notify(user)
 
+        else:
+            engine.say('Aquí se encuentra el fallo')
+            engine.runAndWait()
+            engine.stop()
 
     def _notify(self, user):
             message = f'Ha llegado correo al buzón de {user["owner"]}'
