@@ -8,11 +8,11 @@ class Sensor:
 
     def check_movement(self):
         """Check de movement status"""
-        self.mailbox1 = False
+        self.mailbox1 = True
         self.mailbox2 = False
         self.mailbox3 = False
         self.mailbox4 = False
-        self.mailbox5 = True
+        self.mailbox5 = False
 
         mailboxes = [self.mailbox1, self.mailbox2, self.mailbox3, self.mailbox4, self.mailbox5]
         for i in mailboxes:
@@ -27,3 +27,6 @@ class Sensor:
                     return 4
                 if i == self.mailbox5:
                     return 5
+            
+            else:
+                return False
