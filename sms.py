@@ -2,7 +2,8 @@ from typing import Text
 from twilio.rest import Client 
 
 def sms_send(text, phone_number):
-    """Sends the SMS"""
+    """La función que se encarga de enviar el sms a través de twilio"""
+    #Código sacado de la propia documentación de twilio
     #Hay que dar de alta el número al que se quiera manda el SMS en: https://bit.ly/3k2GcLI.
  
     account_sid = 'ACef0867a31b82b7fcc145855083dc6477' 
