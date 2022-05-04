@@ -8,7 +8,7 @@ import json
 import sensor
 from sms import *
 
-class Raspberry:
+class main:
     def __init__(self, flag):
         self.sensor = sensor.Sensor()
         self.start_time = datetime.time(8, 0, 0)
@@ -60,7 +60,7 @@ while movement:
     flag = 0
     while __name__ == '__main__':
         """El programa solo va a funcionar si es ejecutado como principal"""
-        rb = Raspberry(flag)
+        rb = main(flag)
 
         if flag != 2:
             rb.run()
