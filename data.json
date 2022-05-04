@@ -4,26 +4,6 @@
             "owner": "Daniel",
             "phone_number": "+34652026613",
             "activated": "1"
-        },
-        "buzon2": {
-            "owner": "Bárbara",
-            "phone_number": "+34650817461",
-            "activated": "0"
-        },
-        "buzon3": {
-            "owner": "Vince",
-            "phone_number": "+34698985297",
-            "activated": "1"
-        },
-        "buzon4": {
-            "owner": "Raúl",
-            "phone_number": "+34669522786",
-            "activated": "0"
-        },
-        "buzon5": {
-            "owner": "Atanas",
-            "phone_number": "+34629404113",
-            "activated": "1"
         }
     }
 
