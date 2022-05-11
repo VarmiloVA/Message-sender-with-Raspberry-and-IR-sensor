@@ -1,14 +1,14 @@
-#Librería que gestiona los pines de raspberry
-from gpiozero import MotionSensor
-
+import RPi.GPIO as GPIO
 class Sensor:
     """La clase que se encarga de gestionar el sensor"""
-    def __init__(self):
-        self.mailbox = False
-        #Se establece el pin en el que el sensor está conectado
-        self.pir = MotionSensor(23)
+    def __init__(): pass
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(23, GPIO.IN)
 
     def check_movement(self):
-        #Comprueba si el sensor ha detectado movimiento
-        self.pir.wait_for_motion()
-        return True
+        sensor = GPIO.input(23)     #Lee el estado del sensor
+
+        if sensor == 0:     #Si el sensor detecta movimiento
+            return True
+        elif sensor == 1:   #Si el sensor no detecta movimiento
+            return False
