@@ -1,0 +1,45 @@
+Acerca de main.py :     
+    - Primero se importan las librerías necesarias y después los archivos locales.
+    - Después, todo el código es gestionado mediante la clase main.
+
+    #Información acerca de los módulos:
+    · main() --> __init__(self)
+        - Se declara el valor de todas las variables que
+        van a ser usadas en más de un módulo.
+    · main() --> run(self)
+        - Corre el resto del código llamando a los módulos
+        necesarios.
+    · main() --> sensor_message(self)
+        - Manda el mensaje al usuario.
+    · main() --> _notify(self, user)
+        - Módulo de recurso que prepara el mensaje que
+        va a ser enviado.
+    
+    - Más tarde, se llama a la clase sensor y se declara una variables
+    que toma valores boolianos (True o False) referidos a si hay un objeto
+    en el buzón o no.
+    - Por último, en un bucle con la condición de que el programa sea ejeccutado
+    como principal, si hay movimiento ejecuta la clase main.
+
+Acerca de data.json:
+    - Es el archivo donde se recoge la información de los usuarios.
+
+Acerca de sms.py:
+    - Primero se llama a la librería que gestiona la API encargada de
+    mandar los SMS.
+    - Después, el código es copiado, de la documentación de twilio para python,
+    para después ser modificado.
+
+Acerca de sensor.py:
+    - Este archivo gestiona un sensor ir montado en un Raspberry Pi-1 Model B.
+    - La librería RPi.GPIO aparece como un SyntaxError en el código a no ser que 
+    esta librería se importe usando un sistema raspbian.
+
+    · Sensor() --> __init__():
+        - Se hace la configuración necesaria del sensor.
+    · Sensor() --> check_movement():
+        - Devuelve un valor booleano referente a si hay un objeto en el buzón o
+        no. El valor 0 representa objeto detectado y el valor 1 representa
+        ningún objeto detectado.
+
+

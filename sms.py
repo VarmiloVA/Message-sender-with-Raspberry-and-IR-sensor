@@ -1,4 +1,3 @@
-from typing import Text
 from twilio.rest import Client 
 
 def sms_send(text, phone_number):
