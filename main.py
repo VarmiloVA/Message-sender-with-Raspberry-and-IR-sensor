@@ -1,7 +1,6 @@
 #Librerías
 from time import sleep
 import datetime
-import pyttsx3
 import json
 
 #Archivos propios
@@ -48,7 +47,7 @@ class main:
             print(message)
             sms_send('Ha llegado correo al buzón', user['phone_number'])
 
-#Se llama a la cláse sensor
+#Se llama a la clase sensor
 sensor = sensor.Sensor()
 movement = sensor.check_movement()
 
