@@ -1,4 +1,5 @@
-import RPi.GPIO as GPIO  #A no ser que se esté en un sistema raspbian, esta librería aparecerá como error.
+#A no ser que se esté en un sistema raspbian, esta librería aparecerá como error.
+import RPi.GPIO as GPIO 
 class Sensor:
     """La clase que se encarga de gestionar el sensor"""
     def __init__(): 
