@@ -4,3 +4,5 @@ to_do.txt
 images/
 anexos.docx
 Para_video/
+.venv/
+_requirements.txt
