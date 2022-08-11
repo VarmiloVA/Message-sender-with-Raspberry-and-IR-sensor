@@ -1,1 +1,1 @@
-Este es el proyecto de Digitaliza tu pueblo del grupo de Cantalejo. El proyecto consiste en usar una RaspberryPi y Python para, usando un sensor de movimiento, detectar cuando ha entrado una carta o un paquete pequeño en un buzón, útil para pueblos como Los Cotos (Segovia) y también para urbanizaciones con buzones comunes y bloques de pisos.
+Using an IR sensor and a Raspberry Pi 4 it is possible to track up to 10 mailboxes at the same time, when a letter arrives it sends an SMS.
